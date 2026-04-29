@@ -1,4 +1,5 @@
 from flask import Flask, redirect, render_template, request, url_for
+import sys
 
 app = Flask(__name__)
 
@@ -6,7 +7,7 @@ app = Flask(__name__)
 items = []
 
 @app.route('/')
-def index():
+def index     ():
     return render_template('index.html', items=items)
 
 @app.route('/add', methods=['POST'])
